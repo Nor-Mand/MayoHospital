@@ -18,7 +18,14 @@ body {
   font-family: "PT Sans", sans-serif !important;
 }
 
+section {
+  border: 1px solid red;
+  padding: 100px 50px;
+}
+
 header {
+  position: sticky;
+  top: 0px;
   background-color: #232f66;
 }
 header a {
@@ -27,6 +34,12 @@ header a {
   font-family: "PT Serif", serif;
   padding-right: 1rem !important;
   padding-left: 1rem !important;
+}
+
+footer {
+  border: 1px solid blue;
+  background-color: #232f66;
+  padding: 100px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
