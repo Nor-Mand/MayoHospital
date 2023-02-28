@@ -1,0 +1,11 @@
+header{
+    background-color: $primary-color;    
+
+    a{
+        color: $white-color !important; 
+        text-transform: uppercase; 
+        font-family: $secondary-font; 
+        padding-right: 1rem !important;
+        padding-left: 1rem !important; 
+    }
+}

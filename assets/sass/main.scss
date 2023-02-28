@@ -12,21 +12,7 @@ Text Domain: mayohospital
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap");
-body {
-  background-color: red;
-  font-family: "PT Sans", sans-serif !important;
-}
-
-header {
-  background-color: #232f66;
-}
-header a {
-  color: #ffffff !important;
-  text-transform: uppercase;
-  font-family: "PT Serif", serif;
-  padding-right: 1rem !important;
-  padding-left: 1rem !important;
-}
-
-/*# sourceMappingURL=style.css.map */
+    
+@import 'colors';
+@import 'base';
+@import 'header';
