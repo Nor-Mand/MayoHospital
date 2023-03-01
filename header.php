@@ -13,23 +13,21 @@
     <header>
         <div class="container">
             <div class="row justify-content-center align-items-center">
-                <div class="col-sm-2">
-                    <img src="" alt="Logo Hospital">
+                <div class="col-sm-3">
+                   <a href="<?php echo get_site_url() ?>"> <img src="<?php echo get_template_directory_uri();?>/assets/images/logotipo.png" alt="Logo Hospital"></a>
                 </div>
-                <div class="col-sm-10">
-                <nav class="navbar navbar-expand-lg" id="Menu">
-                        <?php wp_nav_menu(
-                            array(
-                                'theme_location' => "primary-menu",
-                                'container' => "div",
-                                'container_class' => "collapse navbar-collapse",
-                                'items_wrap'      => '<ul class="navbar-nav me-auto mb-2 mb-lg-0">%3$s</ul>',
-                                // 'menu_class'      => 'menu-wrapper',
-                                // 'container_class' => 'primary-menu-container',
+                <div class="col-sm-9">
+                    <nav class="navbar navbar-expand-lg" id="Menu">
+                            <?php wp_nav_menu(
+                                array(
+                                    'theme_location' => "primary-menu",
+                                    'container' => "div",
+                                    'container_class' => "collapse navbar-collapse",
+                                    'items_wrap'      => '<ul class="navbar-nav me-auto mb-2 mb-lg-0">%3$s</ul>',
+                                )
                             )
-                        )
-                        ?>
-                </nav>
+                            ?>
+                    </nav>
                 </div>
             </div>
         </div>

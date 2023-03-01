@@ -37,6 +37,11 @@ function mayo_hospital_scripts_styles(){
     wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/plugins/bootstrap/js/bootstrap.min.js', 5.0);
     wp_enqueue_script('bootstrapjs-map', get_template_directory_uri() . '/plugins/bootstrap/js/bootstrap.min.js.map', 5.0);
 
+	// owl
+    wp_enqueue_style('owl', get_stylesheet_directory_uri() . '/plugins/owl/owl.carousel.min.css', 2.3);
+    wp_enqueue_style('owlTheme', get_stylesheet_directory_uri() . '/plugins/owl/owl.theme.default.min.css', 2.3);
+    wp_enqueue_script('owl', get_template_directory_uri() . '/plugins/owl/owl.carousel.min.js',['jquery'], 2.3);
+
 }
 
 add_action('wp_enqueue_scripts', 'mayo_hospital_scripts_styles');
