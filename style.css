@@ -18,9 +18,34 @@ body {
   font-family: "PT Sans", sans-serif !important;
 }
 
+h1 {
+  color: #232f66;
+  text-transform: uppercase;
+  font-family: "PT Serif", serif;
+  margin-bottom: 30px !important;
+}
+h1 span {
+  color: #dea94d;
+}
+
+h3 {
+  color: #232f66;
+  font-family: "PT Serif", serif;
+}
+
 section {
   border: 1px solid red;
   padding: 100px 50px;
+}
+
+.booking-title {
+  color: #dea94d;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.booking-title p {
+  margin: 0 0 0 10px;
 }
 
 header {
@@ -53,13 +78,18 @@ footer img {
   justify-content: center;
   align-items: center;
   height: 300px;
-  width: 400px;
+  width: 350px;
   position: relative;
 }
-.speciality-card img {
+.speciality-card a {
+  width: 100%;
+  height: 100%;
+}
+.speciality-card a img {
   border-radius: 8px;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .speciality-card .speciality-content {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
@@ -84,7 +114,7 @@ footer img {
 .hero {
   height: 600px;
   position: relative;
-  background-color: #F5F5F5;
+  background-color: rgb(233, 233, 233);
 }
 .hero .hero-back {
   height: 50%;
@@ -114,9 +144,144 @@ footer img {
 .hero .hero-booking .hero-booking__icon svg {
   color: #ffffff;
 }
-.hero .hero-booking h5 {
+.hero .hero-booking h6 {
   color: #dea94d;
   margin: 0;
+}
+
+.btn, .btn-small, .btn-large {
+  background-color: #232f66;
+  color: #ffffff;
+  border-radius: 50px;
+}
+.btn-large {
+  padding: 10px 80px;
+  text-transform: uppercase;
+}
+.btn-small {
+  padding: 10px 50px;
+  text-transform: uppercase;
+}
+
+.btn-small-line {
+  border: 2px solid #606161;
+  color: #606161;
+  background: none;
+  border-radius: 50px;
+  padding: 5px 20px;
+}
+
+#about {
+  background-color: rgb(233, 233, 233);
+  position: relative;
+}
+#about .triangle {
+  height: 50px;
+  width: 80px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(10, -50%);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+#about .about-image {
+  position: absolute;
+  height: 70%;
+  filter: brightness(300%);
+  opacity: 0.4;
+}
+#about .box-content {
+  position: relative;
+  z-index: 1;
+}
+#about .box-image {
+  position: relative;
+}
+#about .box-image img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+#about .box-image .box-shadow {
+  position: absolute;
+  bottom: -20px;
+  right: 60px;
+  height: 250px;
+  width: 250px;
+  background-color: #dea94d;
+}
+
+#contact img {
+  width: 100%;
+}
+#contact .contact-content {
+  background-color: #232f66;
+  color: #ffffff;
+  padding: 50px 40px !important;
+}
+#contact .contact-content h1 {
+  color: #ffffff;
+}
+
+#news {
+  background-color: rgb(233, 233, 233);
+}
+#news .news-container {
+  display: flex;
+  gap: 10px;
+}
+#news .news-container .news-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  height: 250px;
+  width: 250px;
+}
+#news .news-container .news-card .booking-news {
+  color: rgb(233, 233, 233);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+#news .news-container .news-card .booking-news p {
+  margin: 0 0 0 10px;
+}
+#news .news-container .news-card p {
+  font-size: 12px;
+}
+#news .news-container .news-card:nth-child(even) {
+  background-color: #232f66 !important;
+}
+#news .news-container .news-card:nth-child(even) p, #news .news-container .news-card:nth-child(even) h6 {
+  color: #ffffff;
+}
+#news .news-container .news-card:nth-child(even) .btn-small-line {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+#banner {
+  background-color: rgb(233, 233, 233);
+  position: relative;
+}
+#banner .circle {
+  height: 250px;
+  width: 250px;
+  background-color: #232f66;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 0;
+}
+#banner img {
+  width: 250px;
+  position: absolute;
+  bottom: 0;
+}
+#banner .banner-content {
+  padding: 40px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
