@@ -164,7 +164,7 @@
 
 <!-- About Section -->
 <section id="about">
-    <div class="triangle"></div>
+    <div class="triangle "></div>
     <img class="about-image" src="<?php echo get_template_directory_uri() ?>/assets/images/isotipo.png" alt="About image">
     <div class="container">
         <div class="row justify-content-center align-items-center">
@@ -212,7 +212,7 @@
             <div class="col-sm-6 p-0 contact-content">
                 <h1>Book <span>Appointment</span></h1>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis aspernatur molestias dolores quo, unde recusandae.</p>
-                [ Contact form 7 ]
+                <?php echo apply_shortcodes('[contact-form-7 id="32" title="Contact form 1"]') ?>
             </div>
         </div>
     </div>

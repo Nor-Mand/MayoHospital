@@ -16,6 +16,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 body {
   background-color: red;
   font-family: "PT Sans", sans-serif !important;
+  position: relative;
 }
 
 h1 {
@@ -113,7 +114,7 @@ footer img {
 .hero {
   height: 600px;
   position: relative;
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(204, 204, 204);
 }
 .hero .hero-back {
   height: 50%;
@@ -171,8 +172,9 @@ footer img {
 }
 
 #about {
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(204, 204, 204);
   position: relative;
+  width: 100%;
 }
 #about .triangle {
   height: 50px;
@@ -180,8 +182,7 @@ footer img {
   background-color: #ffffff;
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translate(10, -50%);
+  left: 47%;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
 }
 #about .about-image {
@@ -215,18 +216,51 @@ footer img {
 
 #contact img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 #contact .contact-content {
   background-color: #232f66;
   color: #ffffff;
-  padding: 50px 40px !important;
+  padding: 50px 80px !important;
 }
 #contact .contact-content h1 {
   color: #ffffff;
 }
+#contact .contact-content form {
+  width: 100%;
+}
+#contact .contact-content form label {
+  width: 100%;
+}
+#contact .contact-content form input[type=text], #contact .contact-content form input[type=email] {
+  background-color: #232f66;
+  border: none;
+  border-bottom: 1px solid #0088ce;
+  width: 100%;
+  color: rgb(204, 204, 204);
+  font-weight: lighter;
+}
+#contact .contact-content form textarea {
+  background-color: #232f66;
+  border: none;
+  border-bottom: 1px solid #0088ce;
+  width: 100%;
+  height: 60px;
+  color: rgb(204, 204, 204);
+  font-weight: lighter;
+}
+#contact .contact-content form input[type=submit] {
+  margin-top: 20px;
+  background-color: #dea94d;
+  color: #ffffff;
+  padding: 10px 30px;
+  border: 0;
+  text-transform: uppercase;
+}
 
 #news {
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(204, 204, 204);
 }
 #news .news-container {
   display: flex;
@@ -240,7 +274,7 @@ footer img {
   width: 250px;
 }
 #news .news-container .news-card .booking-news {
-  color: rgb(233, 233, 233);
+  color: rgb(204, 204, 204);
   display: flex;
   justify-content: start;
   align-items: center;
@@ -263,7 +297,7 @@ footer img {
 }
 
 #banner {
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(204, 204, 204);
   position: relative;
 }
 #banner .circle {
