@@ -14,7 +14,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap");
 body {
-  background-color: red;
   font-family: "PT Sans", sans-serif !important;
   position: relative;
 }
@@ -35,7 +34,6 @@ h3 {
 }
 
 section {
-  border: 1px solid red;
   padding: 100px 50px;
 }
 
@@ -72,6 +70,15 @@ footer {
 }
 footer img {
   width: 200px;
+}
+footer .footer-card {
+  border: 1px solid #0088ce;
+  padding: 20px;
+  border-radius: 8px;
+  color: #ffffff;
+}
+footer .footer-card p {
+  margin: 0 !important;
 }
 
 .speciality-card {
