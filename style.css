@@ -339,4 +339,14 @@ footer img {
   bottom: 0;
 }
 
+.testimonial-card img {
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+}
+.testimonial-card h5 {
+  color: #dea94d;
+  font-family: "PT Serif", serif;
+}
+
 /*# sourceMappingURL=style.css.map */

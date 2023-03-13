@@ -138,7 +138,7 @@
         <div class="row gx-5">
             <?php
             $args = array(
-                'post_type' => 'specialities-post',
+                'post_type' => 'specialities',
                 'posts_per_page' => 3,
             );
 
@@ -227,30 +227,36 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6">
-                <div class="row">
-                    <div class="col-sm-2">
-                        <img src="" alt="testimonial imagen">
-                    </div>
-                    <div class="col-sm-10">
-                        <h5>Lorem, ipsum.</h5>
-                        <h6>Lorem, ipsum dolor.</h6>
+
+            <?php
+            $args = array(
+                'post_type' => 'testimonials',
+                'posts_per_page' => 2,
+            );
+
+            $loop = new WP_Query($args);
+            while ($loop->have_posts()) {
+                $loop->the_post();
+            ?>
+                <div class="col-sm-6">
+                    <div class="testimonial-card">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-2">
+                                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail() ?></a>
+                            </div>
+                            <div class="col-10">
+                                <h5><?php the_title() ?></h5>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p><?php the_content() ?></p>
+                        </div>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eum atque dicta iusto molestiae itaque similique adipisci dolore repellendus, officia accusantium placeat, quam maiores veniam deserunt, eligendi laborum quas amet cupiditate cumque. Ad voluptatum commodi, possimus doloremque obcaecati quam est dolores saepe voluptates, soluta blanditiis! Ullam ipsum ea itaque iure.</p>
-            </div>
-            <div class="col-sm-6">
-                <div class="row">
-                    <div class="col-sm-2">
-                        <img src="" alt="testimonial imagen">
-                    </div>
-                    <div class="col-sm-10">
-                        <h5>Lorem, ipsum.</h5>
-                        <h6>Lorem, ipsum dolor.</h6>
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eum atque dicta iusto molestiae itaque similique adipisci dolore repellendus, officia accusantium placeat, quam maiores veniam deserunt, eligendi laborum quas amet cupiditate cumque. Ad voluptatum commodi, possimus doloremque obcaecati quam est dolores saepe voluptates, soluta blanditiis! Ullam ipsum ea itaque iure.</p>
-            </div>
+            <?php
+            }
+            wp_reset_postdata();
+            ?>
         </div>
     </div>
 </section>
@@ -285,48 +291,34 @@
                 <button class="btn-small">Read all news</button>
             </div>
             <div class="col-sm-8 news-container">
-                <div class="news-card">
-                    <h6>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h6>
+                <?php
+                $args = array(
+                    'post_type' => 'news',
+                    'posts_per_page' => 3,
+                );
+
+                $loop = new WP_Query($args);
+                while ($loop->have_posts()) {
+                    $loop->the_post();
+                ?>
+                    <div class="news-card">
+                    <h6><?php the_title() ?></h6>
                     <div>
                         <div class="booking-news">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2-week" viewBox="0 0 16 16">
                                 <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
                                 <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z" />
                             </svg>
-                            <p>Lorem ipsum dolor sit.</p>
+                            <p><?php the_date() ?></p>
                         </div>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, illum!</p>
+                        <p><?php echo wp_trim_words(get_the_excerpt(), 10, '[...]'); ?></p>
                     </div>
                     <button class="btn-small-line">Read more</button>
                 </div>
-                <div class="news-card">
-                    <h6>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h6>
-                    <div>
-                        <div class="booking-news">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2-week" viewBox="0 0 16 16">
-                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
-                                <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z" />
-                            </svg>
-                            <p>Lorem ipsum dolor sit.</p>
-                        </div>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, illum!</p>
-                    </div>
-                    <button class="btn-small-line">Read more</button>
-                </div>
-                <div class="news-card">
-                    <h6>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h6>
-                    <div>
-                        <div class="booking-news">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2-week" viewBox="0 0 16 16">
-                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
-                                <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z" />
-                            </svg>
-                            <p>Lorem ipsum dolor sit.</p>
-                        </div>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, illum!</p>
-                    </div>
-                    <button class="btn-small-line">Read more</button>
-                </div>
+                <?php
+                }
+                wp_reset_postdata();
+                ?>
             </div>
         </div>
     </div>
