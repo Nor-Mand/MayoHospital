@@ -288,7 +288,7 @@
             <div class="col-sm-4">
                 <h1>Mayo <span>news</span></h1>
                 <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus nisi dolore enim hic, deleniti non explicabo animi tenetur corporis, accusantium voluptas dolores esse aspernatur placeat aliquid ad quod sapiente ipsum!</p>
-                <button class="btn-small">Read all news</button>
+                <a href="<?php echo get_site_url() ?>/news" class="btn-small">Read all news</a>
             </div>
             <div class="col-sm-8 news-container">
                 <?php

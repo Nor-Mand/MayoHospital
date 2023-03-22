@@ -37,6 +37,29 @@ a {
   text-decoration: none !important;
 }
 
+.paginator {
+  margin-top: 70px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paginator a {
+  padding: 20px;
+  background-color: rgb(204, 204, 204);
+  border-radius: 8px;
+  margin: 5px;
+  color: #232f66;
+}
+.paginator .current {
+  padding: 20px;
+  color: #ffffff;
+  background-color: #232f66;
+  border-radius: 8px;
+}
+.paginator .prev, .paginator .next {
+  background-color: #ffffff !important;
+}
+
 section {
   padding: 100px 50px;
 }
