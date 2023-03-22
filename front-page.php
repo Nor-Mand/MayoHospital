@@ -265,8 +265,8 @@
 <div id="contact">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
-                <video src="">Video</video>
+            <div class="col-sm-6 p-0">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/video.jpg" alt="video">
             </div>
             <div class="col-sm-6 contact-content">
                 <h1><span>Contact</span> <br> Informaction</h1>
@@ -313,7 +313,7 @@
                         </div>
                         <p><?php echo wp_trim_words(get_the_excerpt(), 10, '[...]'); ?></p>
                     </div>
-                    <button class="btn-small-line">Read more</button>
+                    <a href="<?php the_permalink()?>" class="btn-small-line">Read more</a>
                 </div>
                 <?php
                 }
@@ -348,7 +348,7 @@
                         <div class="blog-content">
                             <h5 class="fw-bold"><?php the_title(); ?></h5>
                             <p><?php echo wp_trim_words(get_the_excerpt(), 20, '[...]'); ?></p>
-                            <button class="btn-small-line">Read More</button>
+                            <a href="<?php the_permalink() ?>" class="btn-small-line">Read More</a>
                         </div>
                     </div>
                 </div>

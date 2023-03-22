@@ -33,6 +33,10 @@ h3 {
   font-family: "PT Serif", serif;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 section {
   padding: 100px 50px;
 }
@@ -66,7 +70,6 @@ header a {
 
 footer {
   background-color: #232f66;
-  padding: 100px 0;
 }
 footer img {
   width: 200px;
@@ -79,6 +82,22 @@ footer .footer-card {
 }
 footer .footer-card p {
   margin: 0 !important;
+}
+footer .footer-content {
+  padding: 100px 0;
+}
+footer .footer-develop p {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: #ffffff;
+  padding: 10px 0;
+}
+footer .footer-develop a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding-left: 10px;
 }
 
 .speciality-card {
@@ -356,4 +375,6 @@ footer .footer-card p {
   font-family: "PT Serif", serif;
 }
 
-/*# sourceMappingURL=style.css.map */
+#contact .contact-content {
+  background-color: #232f66;
+}
