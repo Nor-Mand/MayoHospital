@@ -317,5 +317,3 @@ function mayo_custom_types_loop($customPostType, $qty, $cardPostType, $contentPo
 
 }
 
-add_filter('the_content', 'mayo_custom_types_loop');
-

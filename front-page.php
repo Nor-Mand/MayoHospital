@@ -342,7 +342,7 @@
 
             foreach ($last_posts as $post) :
                 setup_postdata($post); ?>
-                <div class="col-10 col-sm-4 mx-auto">
+                <div class="col-10 col-sm-3 mx-auto">
                     <div class="blog-card">
                         <a href="<?php the_permalink() ?>"><?php the_post_thumbnail() ?></a>
                         <div class="blog-content">
