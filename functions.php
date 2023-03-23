@@ -207,7 +207,7 @@ function news_post_type() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => true,
+		'has_archive'           => false,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
@@ -277,6 +277,47 @@ add_action( 'init', 'doctors_post_type', 0 );
 
 
 function mayo_custom_types_loop($customPostType, $qty, $cardPostType, $contentPostType){
+
+	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+	$args = array(
+		'post_type' => $customPostType,
+		'posts_per_page' => $qty,
+		'paged' => $paged,
+	);
+	$loop = new WP_Query($args);
+	while ($loop->have_posts()): 
+		$loop->the_post();
+		
+		$html = '<div class="col-sm-4"><div class="'.$cardPostType.'">';
+		$html .= '<a href="'.get_the_permalink().'"> '. get_the_post_thumbnail(). '</a>';
+		$html .= '<div class="'.$contentPostType.'"><h5>' .get_the_title(). '</h5></div>';
+		$html .= '</div></div>';
+		
+		echo $html;
+		
+	$total_pages = $loop->max_num_pages;
+
+	if ($total_pages > 1) {
+
+		$current_page = max(1, get_query_var('paged'));
+		echo '<div class="col-sm-12 paginator">';
+			echo paginate_links(array(
+				'base' => get_pagenum_link(1) . '%_%',
+				'current' => $current_page,
+				'total' => $total_pages,
+				'prev_text'    => __('« prev'),
+				'next_text'    => __('next »'),
+			));
+		echo'</div>';
+	}
+
+	endwhile;
+	wp_reset_postdata();
+
+}
+
+function mayo_custom_types_news_loop($customPostType, $qty, $cardPostType, $contentPostType){
 
 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 

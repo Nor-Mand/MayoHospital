@@ -361,6 +361,31 @@ footer .footer-develop a {
   color: #ffffff;
 }
 
+#news-page .news-container {
+  display: flex;
+  gap: 10px;
+}
+#news-page .news-container .news-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  height: 300px;
+  width: 350px;
+}
+#news-page .news-container .news-card .booking-news {
+  padding-bottom: 10px;
+  color: #232f66;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+#news-page .news-container .news-card .booking-news p {
+  margin: 0 0 0 10px;
+}
+#news-page .news-container .news-card p {
+  font-size: 12px;
+}
+
 #banner {
   background-color: rgb(204, 204, 204);
   position: relative;
