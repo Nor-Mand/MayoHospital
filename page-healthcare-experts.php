@@ -1,6 +1,28 @@
 <?php get_header() ?>
 
 <section>
+
+        <?php
+            $array = array(
+                'post_type' => 'doctors',
+                'posts_per_page' => 8,
+            );
+
+            $loop = new WP_Query($array);
+            while ($loop->have_posts()) :
+                $loop->the_post();
+            ?>    
+                <p><?php the_title(); ?></p>
+                <p><?php echo get_post_meta( get_the_ID(), 'doctores_nombre', true ); ?></p>
+                <p><?php echo get_post_meta( get_the_ID(), 'doctores_dias', true ) ?></p>
+                <p><?php echo get_post_meta( get_the_ID(), 'doctores_horario', true ); ?></p>
+            <?php
+                wp_reset_postdata();
+            ?>
+    <?php
+    endwhile;
+    wp_reset_postdata();
+    ?>
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
