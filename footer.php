@@ -1,3 +1,12 @@
+<?php
+/**
+ * Footer Template
+ * 
+ * @package Mayohospital
+ * 
+ */
+?>
+
 <footer>
     <div class="container">
         <div class="row gx-5 footer-content">
