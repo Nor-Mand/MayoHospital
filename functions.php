@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Functions template.
+ * Theme Functions.
  * 
  * @package Mayohospital
  */
